@@ -1,0 +1,163 @@
+new about
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  <!-- Linking to the external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<style>
+.bingo{
+    font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+        <a href="index.html"><img src= "images/logo.png"></a>
+         <div class = "nav-links">
+            <ul>
+                <li> <a href="index.html">HOME</a></li>
+                <li> <a href="about.html">ABOUT</a></li>
+                <li> <a href="Events.html">EVENTS</a></li>
+                    <ol>
+                        <a href="">Wedding</a></li>
+                        <a href="">Baby Shower</a></li>
+                        <a href="">Award Function</a></li>
+                        <a href="">Birthday Party</a></li>
+                    </ol>
+                
+                <li> <a href="contact.html">Contact Us</a></li>
+            </ul>
+         </div>
+       </nav>
+       <br><br><br><br><br><br><br><br><br><br><br><br>
+       <h1>About Us</h1>
+    </section>
+    <!--about us content-->
+    
+    
+     <!--footer-->
+     <section class="footer">
+        
+       
+        <p>
+          At Nova Events, we specialize in creating unforgettable experiences<br>
+          for weddings, anniversaries, and corporate events.
+        </p>
+        <a href="index.html"><img src="images/corporate-events.jpg" alt="Corporate Event"></a>
+      
+        <p>
+          Located in Pune, we specialize in wedding, anniversary, and corporate<br>
+          event management, ensuring unforgettable experiences for all our clients.
+        </p>
+        <a href="index.html"><img src="images/a.avif" alt="Anniversary Event"></a>
+      
+        <p>
+          We are India's premier event management company, dedicated to<br>
+          delivering exceptional services tailored to your unique celebration needs.
+        </p>
+        <a href="index.html"><img src="images/a1.avif" alt="Event Celebration"></a>
+      
+        <div class="icon">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+      </section>
+      
+    <div class="no">
+    <h3>For More Details<br> contact:-</h3>
+    <p1>+91 91580*<br><br>
+        XYZ Road, ABC Building<br>
+        Gandhinagar, Gujarat, India<br><br>
+        Email us your query<br>
+        novaevents@gmail.com  </p1>
+            </div>
+    
+
+        <div class="r">
+            <section class="review">
+                <h1>What Our Happy Customers Say</h1>
+                <div class="review-row">
+                    <div class="review-col r1">
+                        <img src="images/m.avif" alt="Customer 1">
+                        <div class="review-content">
+                            <p>"Nova Events team let me speechless! Huge<br> chandeliers and exotic flower arrangements were <br>amazing, Thanks a ton for making<br> our day so special"</p>
+                            <h3>MR. KAPIL</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> 
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="review-col r2">
+                        <img src="images/wp.jpg" alt="Customer 2">
+                        <div class="review-content">
+                            <p>"The team at Nova Events exceeded our expectations <br>for our corporate event. Their attention to<br> detail and professionalism truly made the<br> day special."</p>
+                            <h3>MRS. SHIPRA</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> 
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+         <script>
+            const backToTopBtn = document.createElement('button');
+  backToTopBtn.innerText = '↑';
+  backToTopBtn.id = 'backToTop';
+  document.body.appendChild(backToTopBtn);
+
+  backToTopBtn.style.cssText = `
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    background: #0d4177;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  `;
+
+  window.addEventListener('scroll', () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+         </script>  
+</body>
+</html>

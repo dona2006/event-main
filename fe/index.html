@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  <!-- Linking to the external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<style>
+.bingo{
+    font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+</style>
+    <title>NOVA EVENTS-your vision , our execution</title>
+</head>
+<body>
+    <div class = "container">
+    
+        <div class="slider-wrapper">
+            <nav>
+              <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+              <div class="nav-links">
+                <ul>
+                  <li><a href="index.html">HOME</a></li>
+                  <li><a href="about.html">ABOUT</a></li>  
+                  <li><a href="Events.html">EVENTS</a></li> 
+                  
+                  <li><a href="contact.html">CONTACT US</a></li> 
+                </ul>
+              </div> 
+            </nav>
+          
+            <div class="slider" id="slider">
+              <img src="images/Untitled design (1).jpg" alt="Slide 1" />
+              <img src="images/corporate.webp" alt="Slide 2" />
+              <img src="images/bsfinal.png" alt="Slide 3" />
+              <img src="images/awardfunction.jpg" alt="Slide 4" />
+            </div>
+          
+            <div class="slider-nav">
+              <a href="#slide-1"></a>
+              <a href="#slide-2"></a>
+              <a href="#slide-3"></a>
+              <a href="#slide-4"></a>
+            </div>
+          </div>
+          
+          <script>
+            const slider = document.getElementById('slider');
+            let scrollAmount = 0;
+          
+            setInterval(() => {
+              const slideWidth = slider.clientWidth;
+              if (scrollAmount >= slider.scrollWidth - slideWidth) {
+                scrollAmount = 0;
+              } else {
+                scrollAmount += slideWidth;
+              }
+              slider.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+              });
+            }, 2000);
+          </script>
+       </div> 
+       <section class="e">
+        <br><br>
+        <h1>WE TURN DREAMS INTO REALITY</h1>
+    
+        <div class="content-block s">
+            <h2>SPACE PLANNING</h2>
+            <a href="index.html"><img src="images/s.jpg" alt="Space Planning"></a>
+            <p>As the most prestigious wedding planners,<br> we help in setting the tone and atmosphere of the event. <br>We see event décor as more than just decoration,<br> it is about the essence of the event.</p>
+        </div>
+    
+        <div class="content-block v">
+            <h2>YOUR VISION, OUR INNOVATION</h2>
+            <a href="index.html"><img src="images/v.jpg" alt="Vision"></a>
+            <p>The way your guests feel as they enter the space<br> will influence how they feel throughout and how positively<br> they recall it later. We focus on guest experience<br> and overall aesthetic design.</p>
+        </div>
+    
+        <div class="content-block d">
+            <h2>DESIGN & CONCEPTUALIZATION</h2>
+            <a href="index.html"><img src="images/d.jpg" alt="Design"></a>
+            <p>Imagine yourself getting married; on this lovely occasion,<br> we bring your dream to life. We design a unique setting<br> that captures the significance of this occasion for you.</p>
+        </div>
+    </section>
+    
+    
+     <section class="events " id="events">
+        <h1 class="hidden typing-text">Events We Host</h1>
+        <p class="intro-text hidden">Expert planning for weddings, anniversaries, and corporate events in Pune tailored to your needs.</p>
+      
+        <div class="event-row">
+          <div class="event-card hidden">
+            <a href="index.html"><img src="images/w.jpg" alt="Wedding Event"></a>
+            <h3>WEDDING</h3>
+            <p>Creating unforgettable memories for your special day.</p>
+          </div>
+      
+          <div class="event-card hidden">
+            <a href="index.html"><img src="images/c.jpg" alt="Corporate Events"></a>
+            <h3>CORPORATE EVENTS</h3>
+            <p>Conferences | Product Launches | Seminars | Galas | Team Building | Award Ceremonies.</p>
+          </div>
+      
+          <div class="event-card hidden">
+            <a href="index.html"><img src="images/b.webp" alt="Celebrations"></a>
+            <h3>MEMORABLE CELEBRATIONS</h3>
+            <p>Anniversary | Birthday | Engagement | Bridal & Baby Showers</p>
+          </div>
+        </div>
+      </section>
+      
+    
+    
+    
+      
+    <section class="review">
+    <h1>What Our Happy Customers Say</h1>
+    <div class="review-row">
+        <div class="review-col r1">
+            <img src="images/m.avif" alt="Customer 1">
+            <div class="review-content">
+                <p>"Nova Events team let me speechless! Huge<br> chandeliers and exotic flower arrangements were <br>amazing, Thanks a ton for making<br> our day so special"</p>
+                <h3>MR. KAPIL</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-col r2">
+            <img src="images/wp.jpg" alt="Customer 2">
+            <div class="review-content">
+                <p>"The team at Nova Events exceeded our expectations <br>for our corporate event. Their attention to<br> detail and professionalism truly made the<br> day special."</p>
+                <h3>MRS. SHIPRA</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i> 
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="review">
+  <h1>What Our Happy Customers Say</h1>
+  <p></p>
+
+          <div class="comment-section">
+              <h3>Leave your comment here...</h3>
+              <div id="comments-list"></div>
+              <form id="comment-form">
+                  <input type="text" id="username" placeholder="Your Name" required>
+                  <textarea id="comment" placeholder="Write a comment..." required></textarea>
+                  <button type="submit">Post Comment</button>
+              </form>
+          </div>
+      </div>
+ 
+</section>
+    <!-- call to action -->
+     <section class="cta">
+        <h1>Contact For More Details</h1>
+        <a href="contact.html"class="hero-btn">Contact Us</a>
+     </section>
+     <!--footer-->
+     <section class="footer">
+        <h4>About Us</h4>
+        <p>andjaiscu ohjco pasohcjiz 0ussdc8 sjizp oz <br>z990izjziojaij9ad u90u0 0du0asuc09ajczkmc x0u09u09 a0acai </p>
+     <div class="icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+     </div>
+     
+    </section>
+    <script>
+        // === 1. Scroll-triggered animation (with optional staggered delay) ===
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add('show');
+              }, index * 100); // stagger effect
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+      
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach(el => observer.observe(el));
+      
+      
+        // === 2. Typing Animation for a heading ===
+        function typeEffect(element, speed) {
+          const text = element.innerText;
+          element.innerText = "";
+          let i = 0;
+          const timer = setInterval(() => {
+            if (i < text.length) {
+              element.innerText += text.charAt(i);
+              i++;
+            } else {
+              clearInterval(timer);
+            }
+          }, speed);
+        }
+      
+        window.addEventListener('load', () => {
+          const heading = document.querySelector('.typing-text');
+          if (heading) {
+            typeEffect(heading, 100);
+          }
+        });
+      
+      
+        // === 3. Back to Top Button with Animation ===
+        const backToTopBtn = document.createElement('button');
+        backToTopBtn.innerText = '↑';
+        backToTopBtn.id = 'backToTop';
+        document.body.appendChild(backToTopBtn);
+      
+        backToTopBtn.style.cssText = `
+          position: fixed;
+          bottom: 40px;
+          right: 30px;
+          background: #0d4177;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          font-size: 24px;
+          padding: 10px 15px;
+          cursor: pointer;
+          display: none;
+          z-index: 999;
+          box-shadow: 0 0 10px rgba(0,0,0,0.3);
+          transition: all 0.3s ease;
+        `;
+      
+        window.addEventListener('scroll', () => {
+          backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+      
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      
+      
+        // === 4. Navbar shrink on scroll ===
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 50) {
+            nav.style.padding = "10px 20px";
+            nav.style.background = "rgba(13, 65, 119, 0.9)";
+            nav.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.2)";
+          } else {
+            nav.style.padding = "20px 40px";
+            nav.style.background = "transparent";
+            nav.style.boxShadow = "none";
+          }
+        });
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("comment-form");
+      const commentsList = document.getElementById("comments-list");
+  
+     
+      function fetchComments() {
+          fetch("http://localhost:5000/comments")
+              .then(response => response.json())
+              .then(data => {
+                  commentsList.innerHTML = ""; 
+                  data.forEach(comment => {
+                      const commentDiv = document.createElement("div");
+                      commentDiv.classList.add("comment");
+                      const initial = comment.username.charAt(0).toUpperCase();
+                      commentDiv.innerHTML = `
+                          <div class="comment-header">
+                              <div class="user-initial">${initial}</div>
+                              <span class="username">${comment.username}</span>
+                          </div>
+                          <p class="comment-text">${comment.text}</p>
+                      `;
+  
+                      commentsList.appendChild(commentDiv);
+                  });
+              })
+              .catch(error => console.error("Error fetching comments:", error));
+      }
+  
+      form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const username = document.getElementById("username").value.trim();
+          const text = document.getElementById("comment").value.trim();
+  
+          if (username === "" || text === "") {
+              alert("Please enter your name and comment!");
+              return;
+          }
+  
+          fetch("http://localhost:5000/comments", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ username, text })
+          })
+          .then(response => response.json())
+          .then(() => {
+              fetchComments(); 
+              form.reset();
+          })
+          .catch(error => console.error("Error posting comment:", error));
+      });
+  
+      fetchComments(); 
+  });
+  
+      </script>
+  
+</body>
+</html>

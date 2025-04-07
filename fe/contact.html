@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">  <!-- Linking to the external CSS file -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<style>
+.bingo{
+    font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight:400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+        <a href="index.html"><img src= "images/logo.png"></a>
+         <div class = "nav-links">
+            <ul>
+                <li> <a href="index.html">Home</a></li>
+                <li> <a href="about.html">About</a></li>
+                <li> <a href="Events.html">Events</a></li>
+                    <ol>
+                        <a href="">Wedding</a></li>
+                        <a href="">Baby Shower</a></li>
+                        <a href="">Award Function</a></li>
+                        <a href="">Birthday Party</a></li>
+                    </ol>
+                
+                <li> <a href="contact.html">Contact Us</a></li>
+            </ul>
+         </div>
+       </nav>
+       <br><br><br><br><br><br><br><br><br><br><br><br>
+       <h1>Contact Us</h1>
+    </section>
+    <!--contact us-->
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3665.561766391726!2d72.64778927554622!3d23.259029007462374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2c777c4b5e63%3A0xf2af0643c7186398!2sIndian%20Institute%20of%20Information%20Technology%20Vadodara%20(Gandhinagar%20Campus)!5e0!3m2!1sen!2sin!4v1741864029424!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    
+      
+
+
+
+     <!--footer-->
+     <section class="footer">
+
+     <div class="icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-linkedin"></i>
+     </div>
+     
+    </section>
+    <div class="no">
+    <h3>For More Details<br> contact:-</h3>
+                <p1>+91 91580*<br><br>
+                    XYZ Road, ABC Building<br>
+                    Gandhinagar, Gujarat, India<br><br>
+                    Email us your query<br>
+                    novaevents@gmail.com  </p1>
+            </div>
+            <section class="review">
+                <h1>What Our Happy Customers Say</h1>
+                <div class="review-row">
+                    <div class="review-col r1">
+                        <img src="images/m.avif" alt="Customer 1">
+                        <div class="review-content">
+                            <p>"Nova Events team let me speechless! Huge<br> chandeliers and exotic flower arrangements were <br>amazing, Thanks a ton for making<br> our day so special"</p>
+                            <h3>MR. KAPIL</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> 
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="review-col r2">
+                        <img src="images/wp.jpg" alt="Customer 2">
+                        <div class="review-content">
+                            <p>"The team at Nova Events exceeded our expectations <br>for our corporate event. Their attention to<br> detail and professionalism truly made the<br> day special."</p>
+                            <h3>MRS. SHIPRA</h3>
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i> 
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script>
+                const backToTopBtn = document.createElement('button');
+        backToTopBtn.innerText = '↑';
+        backToTopBtn.id = 'backToTop';
+        document.body.appendChild(backToTopBtn);
+      
+        backToTopBtn.style.cssText = `
+          position: fixed;
+          bottom: 40px;
+          right: 30px;
+          background: #0d4177;
+          color: white;
+          border: none;
+          border-radius: 50%;
+          font-size: 24px;
+          padding: 10px 15px;
+          cursor: pointer;
+          display: none;
+          z-index: 999;
+          box-shadow: 0 0 10px rgba(0,0,0,0.3);
+          transition: all 0.3s ease;
+        `;
+      
+        window.addEventListener('scroll', () => {
+          backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+      
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      
+            </script>
+            
+</body>
+</html>
