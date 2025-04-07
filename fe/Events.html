@@ -12,7 +12,7 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+   
 
 <style>
 .bingo{
@@ -32,9 +32,9 @@
         <a href="index.html"><img src= "images/logo.png"></a>
          <div class = "nav-links">
             <ul>
-                <li> <a href="index.html">Home</a></li>
-                <li> <a href="about.html">About</a></li>
-                <li> <a href="Events.html">Events</a></li>
+                <li> <a href="index.html">HOME</a></li>
+                <li> <a href="about.html">ABOUT</a></li>
+                <li> <a href="Events.html">EVENTS</a></li>
                     <ol>
                         <a href="">Wedding</a></li>
                         <a href="">Baby Shower</a></li>
@@ -172,21 +172,23 @@
       <br><br><br><br><br><br><br>
       <hr>
       <div class="comment-box">
-        <h3> Enter Your Detail</h3>
-        <form class =comment-form>
-            <input type="text"name="name" placeholder="Enter Your Name" required>
-            <input type="email"name="email" placeholder="Enter Email" required>
-            <input type="text"name="event" placeholder="Enter type of Event" required>
-            <textarea rows="8" placeholder="message" required>
-                </textarea>
-            <button type="submit" class="hero-btn red-btn">POST</button>
+        <h3>Enter Your Detail</h3>
+        <form id="myForm" class="comment-form">
+          <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Enter Email" required>
+          <input type="text" id="event_type" name="event" placeholder="Enter type of Event" required>
+          <textarea id="message" name="message" rows="8" placeholder="Message" required></textarea>
+          <button type="submit" class="hero-btn red-btn">SUBMIT</button>
         </form>
       </div>
-      
+
       <div id="sortedData">
-              <h3>THESE ARE SOME OF OUR HAPPY CUSTOMERS</h3>
-              <ul id="dataList"></ul>
-            </div>
+        <h3>THESE ARE SOME OF OUR HAPPY CUSTOMERS</h3>
+        <ul id="dataList"></ul>
+      </div>
+      
+      
+    
      <!--footer-->
      <section class="footer">
         
@@ -260,95 +262,71 @@
     observer.observe(card);
   });
 
-  const backToTopBtn = document.createElement('button');
-        backToTopBtn.innerText = '↑';
-        backToTopBtn.id = 'backToTop';
-        document.body.appendChild(backToTopBtn);
-      
-        backToTopBtn.style.cssText = `
-          position: fixed;
-          bottom: 40px;
-          right: 30px;
-          background: #0d4177;
-          color: white;
-          border: none;
-          border-radius: 50%;
-          font-size: 24px;
-          padding: 10px 15px;
-          cursor: pointer;
-          display: none;
-          z-index: 999;
-          box-shadow: 0 0 10px rgba(0,0,0,0.3);
-          transition: all 0.3s ease;
-        `;
-      
-        window.addEventListener('scroll', () => {
-          backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-        });
-      
-        backToTopBtn.addEventListener('click', () => {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-      
+
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <script>
-      window.onload = () => {
-        const supabaseUrl = 'https://whnnetlcjvvnljiimnro.supabase.co';
-        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indobm5ldGxjanZ2bmxqaWltbnJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM5NjYzNDAsImV4cCI6MjA1OTU0MjM0MH0.GbrY7leW_XSE-mFh49_R2YV3CuDPiMdMD6gBbJReIFA';
-        const client = supabase.createClient(supabaseUrl, supabaseKey);
+    <!-- Load the Supabase SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+
+<!-- Then run your code AFTER it loads -->
+<script>
+  window.onload = () => {
+    const supabaseUrl = 'https://whnnetlcjvvnljiimnro.supabase.co';
+    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indobm5ldGxjanZ2bmxqaWltbnJvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDM5NjYzNDAsImV4cCI6MjA1OTU0MjM0MH0.GbrY7leW_XSE-mFh49_R2YV3CuDPiMdMD6gBbJReIFA';
+    const client = supabase.createClient(supabaseUrl, supabaseKey);
+
+    async function fetchSortedData() {
+  const { data, error } = await client
+    .from('formdata')
+    .select('*')
+    .order('name', { ascending: true })
+    .limit(5);
     
-        async function fetchSortedData() {
-      const { data, error } = await client
-        .from('formdata')
-        .select('*')
-        .order('name', { ascending: true })
-        .limit(5);
-        
-      if (error) {
-        console.error('Fetch error:', error);
+  if (error) {
+    console.error('Fetch error:', error);
+    return;
+  }
+  console.log("Fetched data:", data);
+
+  const list = document.getElementById('dataList');
+  if (!list) {
+        console.error("dataList UL element not found!");
         return;
       }
-      console.log("Fetched data:", data);
+  list.innerHTML = ''; // Clear previous entries
+
+  data.forEach(entry => {
+    const li = document.createElement('li');
+    li.textContent = entry.name; // ✅ Only show the name
+    list.appendChild(li);
+  });
+}
+fetchSortedData();
+
+    document.querySelector('.comment-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const name = e.target.name.value;
+      const email = e.target.email.value;
+      const eventType = e.target.event.value;
+      const message = e.target.message.value;
+
+      const { data, error } = await client
+        .from('formdata')
+        .insert([{ name, email_id: email, event_type: eventType, message }]);
+
+      if (error) {
+        console.error('Insert error:', error);
+        alert('Error submitting form.');
+      } else {
+        alert('Form submitted successfully!');
+        e.target.reset();
+        fetchSortedData();
+      }
+    });
     
-      const list = document.getElementById('dataList');
-      if (!list) {
-            console.error("dataList UL element not found!");
-            return;
-          }
-      list.innerHTML = ''; // Clear previous entries
-    
-      data.forEach(entry => {
-        const li = document.createElement('li');
-        li.textContent = entry.name; // ✅ Only show the name
-        list.appendChild(li);
-      });
-    }
-    fetchSortedData();
-    
-        document.querySelector('.comment-form').addEventListener('submit', async (e) => {
-          e.preventDefault();
-    
-          const name = e.target.name.value;
-          const email = e.target.email.value;
-          const eventType = e.target.event.value;
-          const message = e.target.message.value;
-    
-          const { data, error } = await client
-            .from('formdata')
-            .insert([{ name, email_id: email, event_type: eventType, message }]);
-    
-          if (error) {
-            console.error('Insert error:', error);
-            alert('Error submitting form.');
-          } else {
-            alert('Form submitted successfully!');
-            e.target.reset();
-            fetchSortedData();
-          }
-        });
-        
-      };
-    </script>
+  };
+</script>
+
+  
 </body>
 </html>
